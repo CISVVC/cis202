@@ -1,0 +1,8 @@
+syntax:glob
+a.out
+*.d
+*.o
+.project
+.cproject
+.settings
+Debug
