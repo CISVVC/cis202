@@ -1,7 +1,6 @@
 #include <cstdlib>
 #include "fraction.h"
 
-
 using namespace std;
 
 int gcd(int a, int b)
@@ -49,6 +48,13 @@ Fraction::Fraction(int n, int d)
    }
 }
 
+Fraction::operator double() const
+{
+      // Convert numerator to double, then do division
+         return numerator * 1.0 / denominator;
+}
+
+
 Fraction Fraction::operator+(Fraction other) const
 {
    return Fraction(numerator * other.denominator
@@ -64,17 +70,17 @@ Fraction Fraction::operator*(Fraction other) const
 
 Fraction operator*(int n, Fraction f)
 {
-   return f * n;
+   return n * f;
 }
 
 Fraction operator-(Fraction f)
 {
-   return f * -1;
+   return -1 * f;
 }
 
 Fraction operator-(Fraction f, Fraction g)
 {
-   return f + g * -1;
+   return -1 * g + f;
 }
 
 Fraction Fraction::inverse() const
