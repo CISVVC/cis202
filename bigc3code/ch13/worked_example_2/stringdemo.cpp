@@ -14,6 +14,7 @@ int spaces(String str)
    return count;
 }
 
+
 int main()
 {
    String name("Mary Ann");
