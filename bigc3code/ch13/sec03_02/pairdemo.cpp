@@ -1,5 +1,5 @@
 #include <iostream>
-#include "pair.h"
+#include "pair.hpp"
 
 using namespace std;
 
