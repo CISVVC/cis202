@@ -6,18 +6,16 @@ using namespace std;
 
 void print_list(const list<string> &l)
 {
-	/*
     for(list<string>::const_iterator p = l.begin();p != l.end();p++)
     {
        cout << *p  << " " << endl;
     }
     cout << endl;
-    */
    //for (const string& element : l)
-   for (auto element : l)
-   {
+/*   for (auto element : l)
       cout << element << " ";
    }
+   */
    cout << endl;
 }
 
