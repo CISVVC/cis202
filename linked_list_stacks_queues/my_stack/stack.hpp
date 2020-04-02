@@ -34,13 +34,16 @@ template<class T>
 T Stack<T>::top()
 {
    if(m_stack_data.size() <= 0)
-      throw "we have a problem"; 
+      throw "stack is empty"; 
+
    return m_stack_data.back();
 }
 
 template<class T> 
 void Stack<T>::pop()
 {
+   if(m_stack_data.size() <= 0)
+      throw "stack is empty"; 
    m_stack_data.pop_back();
 }
 
