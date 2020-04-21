@@ -14,6 +14,7 @@ int main()
 
    fruit.insert("Apples");
    fruit.insert("Oranges");
+   fruit.insert("Grapes");
    fruit.insert("Apples"); // Has no effect: "Apples" is already in the set
    print(fruit);
 
@@ -45,6 +46,13 @@ int main()
             std::cout << name << " ";
    }
    std::cout << std::endl;
+   
+
+   auto f = fruit.find("Grapes");
+   if(f != fruit.end())
+   {
+      std::cout << *f << " is in the set" << std::endl;
+   }
 
    // of course, you could use the print function that was shown earlier
 
