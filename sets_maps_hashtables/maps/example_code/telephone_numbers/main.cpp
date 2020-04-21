@@ -67,6 +67,7 @@ int main()
    data.add_entry("Fred", 7235591);
    data.add_entry("Mary", 3841212);
    data.add_entry("Sarah", 3841212);
+   cout << "Number for Barney: " << data.find_entry("Barney") << endl;
    cout << "Number for Fred: " << data.find_entry("Fred") << endl;
    cout << "All names and numbers:" << endl;
    data.print_all();
