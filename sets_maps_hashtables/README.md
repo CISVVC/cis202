@@ -4,9 +4,11 @@
 * To implement the set and map classes of the C++ standard library
 * To implement a hash table and understand the efficiency of its operations
 
-(Sets)[./sets]
-(Maps)[./maps]
-(Hash Table)[./hash_table]
+   [Sets](./sets)
+
+   [Maps](./maps)
+
+   [Hash Table](./hash_table)
 
 # Topic Summary
 
