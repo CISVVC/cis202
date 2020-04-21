@@ -1,7 +1,7 @@
 #include<iostream>
-#include<set>
+#include<unordered_set>
 
-void print(const std::set<std::string> &container)
+void print(const std::unordered_set<std::string> &container)
 {
    for(auto c : container)
       std::cout << c << " ";
@@ -10,7 +10,7 @@ void print(const std::set<std::string> &container)
 
 int main()
 {
-   std::set<std::string> fruit;
+   std::unordered_set<std::string> fruit;
 
    fruit.insert("Apples");
    fruit.insert("Oranges");
@@ -21,6 +21,32 @@ int main()
    fruit.erase("Apples"); // Has no effect: "Apples" is no longer in the set
 
    print(fruit);
+
+
+   std::unordered_set<std::string> names;
+   names.insert("Tom");
+   names.insert("Diana");
+   names.insert("Harry");
+
+   std::unordered_set<std::string>::iterator pos;
+   for (pos = names.begin(); pos != names.end(); pos++) {
+      std::cout << *pos << " ";
+   }
+   std::cout << std::endl;
+
+   // or you can use the auto keyword
+   for (auto pos = names.begin(); pos != names.end(); pos++) {
+            std::cout << *pos << " ";
+   }
+   std::cout << std::endl;
+
+   // the enhanced for loop works as well
+   for (auto name : names) {
+            std::cout << name << " ";
+   }
+   std::cout << std::endl;
+
+   // of course, you could use the print function that was shown earlier
 
    return 0;
 }

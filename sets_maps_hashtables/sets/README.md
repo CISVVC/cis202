@@ -27,5 +27,8 @@ The fundamental operations on a set are
 * Finding an element.
 * Traversing all elements.
 
-[Operation Examples](./set_operations)
+[Operations](./set_operations)
+
+[Spellcheck Example](./example_code/spell_check)
+[Special Topic: Hash Code Example](./example_code/hash_code)
 
