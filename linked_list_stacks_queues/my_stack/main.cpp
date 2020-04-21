@@ -22,7 +22,26 @@ int main()
       std::cout << e << std::endl;
    }
 
-//   std::cout << my_stack.top() << std::endl;
+   Stack<std::string> my_stringstack;
+   my_stringstack.push("one");
+   my_stringstack.push("two");
+   my_stringstack.push("three");
+   my_stringstack.push("four");
+   try
+   {
+      while(my_stringstack.size() > 0)
+      {
+         std::cout << my_stringstack.top() << std::endl;
+         my_stringstack.pop();
+      }
+      my_stringstack.pop();
+   }
+   catch(const char* e)
+   {
+
+      std::cout << e << std::endl;
+   }
+
 
    return 0;
 }
