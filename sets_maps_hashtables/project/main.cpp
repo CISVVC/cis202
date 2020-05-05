@@ -7,7 +7,7 @@ struct Word {
    Word() {};
    Word(std::string w) : word(w){};
    std::string word;
-   std::list<int> line_numbers;
+   const std::list<int> *line_numbers = new std::list<int>;
 };
 
 bool operator==(const Word &lhs,const Word &rhs) {
@@ -33,6 +33,18 @@ int main()
     s.insert(w2);
     s.insert(Word("three"));
     s.insert(Word("four"));
+    auto it = s.find(Word("three"));
+    if(it != s.end())
+    {
+       it->line_numbers->push_back(10);
+       it->line_numbers->push_back(11);
+       it->line_numbers->push_back(12);
+    }
+    std::cout << "Line number for three:";
+    for(auto line : *(it->line_numbers)){
+      std::cout << line << std::endl;
+    }
+
 
     if(w1 == w2) {
        std::cout << "They are equal" << std::endl;

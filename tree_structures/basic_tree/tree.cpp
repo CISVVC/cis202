@@ -25,7 +25,10 @@ int Tree::size() const
 int Node::size() const
 {
    int sum = 0;
-   for (Node* child : children) { sum = sum + child->size(); }
+   for (Node* child : children) 
+   { 
+      sum = sum + child->size(); 
+   }
    return 1 + sum;
 }
 
