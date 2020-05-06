@@ -10,8 +10,7 @@ using namespace std;
 
 int main()
 {
-   BinaryTree question_tree(
-      BinaryTree("Is it a mammal?",
+   BinaryTree question_tree(BinaryTree("Is it a mammal?",
          BinaryTree("Does it have stripes?",
             BinaryTree("Is it a carnivore?",
                BinaryTree("It is a tiger."),

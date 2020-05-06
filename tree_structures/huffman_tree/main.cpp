@@ -40,5 +40,9 @@ int main()
    std::cout << encoded << std::endl;
    std::string decoded = tree.decode(encoded);
    std::cout << decoded << std::endl;
+   encoded = encode("WIKIWIKI", encoding_map);
+   std::cout << encoded << std::endl;
+   decoded = tree.decode(encoded);
+   std::cout << decoded << std::endl;
    return 0;
 }
