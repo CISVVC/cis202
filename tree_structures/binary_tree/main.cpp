@@ -17,14 +17,28 @@ int main()
    t.insert("G");
    t.insert("H");
    t.insert("J");
-   t.erase("A"); // Removing leaf
-   t.erase("B"); // Removing element with one child
-   t.erase("F"); // Removing element with two children
-   t.erase("D"); // Removing root
+
+   /*
+    *                   D
+    *                /    \
+    *               B      F 
+    *              / \    / \
+    *             A   C  E   I
+    *                       / \
+    *                      G   J
+    *                       \
+    *                        H
+    */
+   //t.erase("H"); // Removing leaf
+   t.erase("I"); // Removing leaf
+   //t.erase("A"); // Removing leaf
+   //t.erase("B"); // Removing element with one child
+   //t.erase("F"); // Removing element with two children
+   //t.erase("D"); // Removing root
    t.print();
-   std::cout << "Expected: C E G H I J" << std::endl;
-   std::cout << t.count("A") << " " << t.count("J") << std::endl;
-   std::cout << "Expected: 0 1" << std::endl;
+   //std::cout << "Expected: C E G H I J" << std::endl;
+   //std::cout << t.count("A") << " " << t.count("J") << std::endl;
+   //std::cout << "Expected: 0 1" << std::endl;
    return 0;
 }
 

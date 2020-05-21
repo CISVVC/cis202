@@ -92,6 +92,7 @@ void BinarySearchTree::erase(std::string element)
       {
          parent->right = new_child;
       }
+      delete to_be_removed;
       return;
    }
       
@@ -120,6 +121,7 @@ void BinarySearchTree::erase(std::string element)
    {
       smallest_parent->left = smallest->right; 
    }
+   delete smallest;
 }
    
 void BinarySearchTree::print() const
@@ -137,7 +139,7 @@ void BinarySearchTree::print(Node* parent) const
 }
 
 void BinarySearchTree::add_node(Node* parent, Node* new_node) const
-{  
+{ 
    if (new_node->data < parent->data)
    {  
       if (parent->left == nullptr) { parent->left = new_node; }
